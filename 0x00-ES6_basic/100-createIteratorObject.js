@@ -1,20 +1,13 @@
 export default function createIteratorObject(report) {
-  let departments = Object.values(report.allEmployees);
-  let employees = departments.flatMap(department => department);
-
-  let currentIndex = 0;
-
-  return {
-    [Symbol.iterator]() {
-      return this;
-    },
-    next() {
-      if (currentIndex < employees.length) {
-        return { value: employees[currentIndex++], done: false };
-      } else {
-        currentIndex = 0;
-        return { done: true };
+  // Generator function to iterate through every employee in every department
+  function* iterator() {
+    for (const department of Object.values(report.allEmployees)) {
+      for (const employee of department) {
+        yield employee;
       }
     }
-  };
+  }
+  
+  // Return the iterator object
+  return iterator();
 }
