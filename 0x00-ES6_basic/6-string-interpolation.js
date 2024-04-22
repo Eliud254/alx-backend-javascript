@@ -5,9 +5,9 @@ export default function getSanFranciscoDescription() {
 
   // Define the budget object containing income, GDP, and capita data
   const budget = {
-    income: '$119,868',      // Income data
-    gdp: '$154.2 billion',   // GDP data
-    capita: '$178,479',      // Per capita data
+    income: '$119,868', 
+    gdp: '$154.2 billion', 
+    capita: '$178,479',     
   };
 
   // Return a string containing the description of San Francisco
