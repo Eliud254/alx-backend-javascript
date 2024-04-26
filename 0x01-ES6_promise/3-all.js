@@ -1,12 +1,8 @@
 import { uploadPhoto, createUser } from "./utils.js";
 
 function handleProfileSignup() {
-  // Call both functions and store their promises
-  const photoPromise = uploadPhoto();
-  const userPromise = createUser();
-
   // Use Promise.all to collectively resolve all promises
-  Promise.all([photoPromise, userPromise])
+  Promise.all([uploadPhoto(), createUser()])
     .then((results) => {
       // Destructure the results array to access the resolved values
       const [photo, user] = results;
