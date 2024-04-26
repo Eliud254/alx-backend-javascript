@@ -1,7 +1,8 @@
 export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Eslint-disable-next-line and no-constant-condition
-    if (true) {
+    // eslint-disable-next-line no-constant-condition
+    const condition = true;
+    if (condition) {
       resolve();
     } else {
       reject();
