@@ -4,3 +4,4 @@ export default function getStudentIdsSum(studentData) {
     );
     return numberOfStudents;
   }
+  
