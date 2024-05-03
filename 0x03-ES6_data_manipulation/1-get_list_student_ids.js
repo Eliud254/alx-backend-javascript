@@ -5,3 +5,4 @@ export default function getListStudentIds(objectsArray) {
     const ids = objectsArray.map((i) => i.id);
     return ids;
   }
+  
