@@ -1,12 +1,12 @@
 import readDatabase from '../utils';
 
 /**
- * supported majors.
+ * Supported majors.
  */
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
- *  student-related route handlers 
+ * Student-related route handlers.
  */
 class StudentsController {
   static getAllStudents(request, response) {
@@ -49,6 +49,7 @@ class StudentsController {
       response.status(500).send('Major parameter must be CS or SWE');
       return;
     }
+
     readDatabase(dataPath)
       .then((studentGroups) => {
         let responseText = '';
@@ -68,4 +69,3 @@ class StudentsController {
 }
 
 export default StudentsController;
-module.exports = StudentsController;
